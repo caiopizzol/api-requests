@@ -7,3 +7,6 @@ dist/
 __pycache__/
 .pytest_cache/
 dev/
+.venv/
+.tox/
+.coverage
