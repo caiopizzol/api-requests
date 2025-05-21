@@ -1,23 +1,19 @@
 """
-Middleware examples using API Requests.
+Middleware examples using Integrates.
 
-This example demonstrates how to use different middleware components with API Requests.
+This example demonstrates how to use different middleware components with Integrates.
 """
 
 import asyncio
 import logging
 
-import api_requests as api
-from api_requests.middleware import (
-    LoggingMiddleware,
-    RateLimiterMiddleware,
-    RetryMiddleware,
-)
+import integrates as api
+from integrates.middleware import LoggingMiddleware, RateLimiterMiddleware, RetryMiddleware
 
 
 def setup_logging():
     """Set up logging for the examples."""
-    logger = logging.getLogger("api-requests")
+    logger = logging.getLogger("integrates")
     logger.setLevel(logging.INFO)
 
     # Create a console handler

@@ -5,7 +5,7 @@ Basic HTTP authentication.
 import base64
 from typing import Dict
 
-from api_requests.auth.base import Auth
+from integrates.auth.base import Auth
 
 
 class BasicAuth(Auth):

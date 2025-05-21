@@ -100,11 +100,11 @@ build: clean-build
 
 publish-test: build
 	@echo "🧪 Publishing to test repository..."
-	python -m twine upload --repository api-requests-test src/dist/*
+	python -m twine upload --repository integrates-test src/dist/*
 
 publish: build
 	@echo "🚀 Publishing to main repository..."
-	python -m twine upload --repository api-requests src/dist/*
+	python -m twine upload --repository integrates src/dist/* --verbose
 
 # Version bump targets
 bump-patch:

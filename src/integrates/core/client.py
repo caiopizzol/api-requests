@@ -6,14 +6,14 @@ from typing import Any, Dict, List, Optional, Union
 from urllib.parse import urljoin
 
 import httpx
-from api_requests.auth.base import Auth
-from api_requests.core.exceptions import APIRequestsError, TransportError
-from api_requests.core.response import Response
-from api_requests.middleware.base import Middleware
+from integrates.auth.base import Auth
+from integrates.core.exceptions import IntegratesError, TransportError
+from integrates.core.response import Response
+from integrates.middleware.base import Middleware
 
 
 class BaseClient:
-    """Base class for API Requests clients."""
+    """Base class for Integrates clients."""
 
     def __init__(
         self,
@@ -95,7 +95,7 @@ class Client(BaseClient):
             Response object
 
         Raises:
-            APIRequestsError: If the request fails
+            IntegratesError: If the request fails
         """
         # Apply middlewares (pre-request)
         request_url = urljoin(self.base_url, url)
@@ -250,7 +250,7 @@ class AsyncClient(BaseClient):
             Response object
 
         Raises:
-            APIRequestsError: If the request fails
+            IntegratesError: If the request fails
         """
         # Apply middlewares (pre-request)
         request_url = urljoin(self.base_url, url)

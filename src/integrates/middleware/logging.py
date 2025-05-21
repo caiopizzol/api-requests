@@ -5,8 +5,8 @@ Logging middleware for request and response logging.
 import logging
 from typing import Any, Dict, Optional
 
-from api_requests.core.response import Response
-from api_requests.middleware.base import Middleware
+from integrates.core.response import Response
+from integrates.middleware.base import Middleware
 
 
 class LoggingMiddleware(Middleware):
@@ -17,10 +17,10 @@ class LoggingMiddleware(Middleware):
         Initialize LoggingMiddleware.
 
         Args:
-            logger: Logger to use (defaults to a logger named 'api-requests')
+            logger: Logger to use (defaults to a logger named 'integrates')
             level: Logging level
         """
-        self.logger = logger or logging.getLogger("api-requests")
+        self.logger = logger or logging.getLogger("integrates")
         self.level = level
 
     def pre_request(self, request_kwargs: Dict[str, Any]) -> Dict[str, Any]:

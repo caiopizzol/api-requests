@@ -4,7 +4,7 @@ Bearer token authentication.
 
 from typing import Dict
 
-from api_requests.auth.base import Auth
+from integrates.auth.base import Auth
 
 
 class BearerAuth(Auth):

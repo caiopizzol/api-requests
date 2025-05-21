@@ -4,7 +4,7 @@ Base class for middleware.
 
 from typing import Any, Dict
 
-from api_requests.core.response import Response
+from integrates.core.response import Response
 
 
 class Middleware:

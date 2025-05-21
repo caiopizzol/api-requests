@@ -4,7 +4,7 @@ OAuth 2.0 authentication.
 
 from typing import Dict, Optional
 
-from api_requests.auth.bearer import BearerAuth
+from integrates.auth.bearer import BearerAuth
 
 
 class OAuth2(BearerAuth):

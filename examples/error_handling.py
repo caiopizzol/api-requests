@@ -1,19 +1,14 @@
 """
-Error Handling examples using API Requests.
+Error Handling examples using Integrates.
 
-This example demonstrates how to handle various error scenarios with API Requests.
+This example demonstrates how to handle various error scenarios with Integrates.
 """
 
 import asyncio
 import time
 
-import api_requests as api
-from api_requests.core.exceptions import (
-    HTTPError,
-    APIRequestsError,
-    TimeoutError,
-    TransportError,
-)
+import integrates as api
+from integrates.core.exceptions import HTTPError, IntegratesError, TimeoutError, TransportError
 
 
 def basic_error_handling():

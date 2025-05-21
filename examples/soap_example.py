@@ -1,5 +1,5 @@
 """
-SOAP client example using API Requests.
+SOAP client example using Integrates.
 
 This example demonstrates how to use the SOAP client to interact with SOAP web services.
 """
@@ -8,7 +8,7 @@ import asyncio
 import xml.etree.ElementTree as ET
 from pprint import pprint
 
-import api_requests as api
+import integrates as api
 
 
 def basic_soap_request():

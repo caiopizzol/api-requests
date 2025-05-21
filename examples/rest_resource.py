@@ -1,5 +1,5 @@
 """
-REST Resource Pattern examples using API Requests.
+REST Resource Pattern examples using Integrates.
 
 This example demonstrates how to use the ResourceClient for RESTful APIs.
 """
@@ -7,7 +7,7 @@ This example demonstrates how to use the ResourceClient for RESTful APIs.
 import asyncio
 import json
 
-import api_requests as api
+import integrates as api
 
 
 def rest_client_example():
@@ -35,8 +35,8 @@ def rest_client_example():
     # Create a new post
     response = posts.post(
         json={
-            "title": "API Requests REST Client",
-            "body": "This post was created with API Requests REST Client",
+            "title": "Integrates REST Client",
+            "body": "This post was created with Integrates REST Client",
             "userId": 1,
         }
     )
@@ -47,8 +47,8 @@ def rest_client_example():
     response = post.put(
         json={
             "id": 1,
-            "title": "Updated with API Requests",
-            "body": "This post was updated with API Requests REST Client",
+            "title": "Updated with Integrates",
+            "body": "This post was updated with Integrates REST Client",
             "userId": 1,
         }
     )

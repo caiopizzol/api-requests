@@ -5,7 +5,7 @@ API key authentication.
 from enum import Enum, auto
 from typing import Dict
 
-from api_requests.auth.base import Auth
+from integrates.auth.base import Auth
 
 
 class ApiKeyLocation(Enum):

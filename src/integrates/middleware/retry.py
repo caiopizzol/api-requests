@@ -4,7 +4,7 @@ Retry middleware with exponential backoff.
 
 from typing import Any, Dict, List, Optional
 
-from api_requests.middleware.base import Middleware
+from integrates.middleware.base import Middleware
 
 
 class RetryMiddleware(Middleware):

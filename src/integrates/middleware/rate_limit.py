@@ -5,8 +5,8 @@ Rate limiting middleware using token bucket algorithm.
 import time
 from typing import Any, Dict, Optional
 
-from api_requests.core.response import Response
-from api_requests.middleware.base import Middleware
+from integrates.core.response import Response
+from integrates.middleware.base import Middleware
 
 
 class RateLimiterMiddleware(Middleware):

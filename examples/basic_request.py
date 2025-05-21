@@ -1,12 +1,12 @@
 """
-Basic HTTP request example using API Requests.
+Basic HTTP request example using Integrates.
 
-This example demonstrates how to make basic HTTP requests using the API Requests Client.
+This example demonstrates how to make basic HTTP requests using the Integrates Client.
 """
 
 import asyncio
 
-import api_requests as api
+import integrates as api
 
 
 def sync_example():
@@ -20,13 +20,17 @@ def sync_example():
     print(f"Response JSON: {response.json()}")
 
     # Make a POST request with JSON data
-    response = client.post("https://httpbin.org/post", json={"name": "API Requests", "type": "API Client"})
+    response = client.post(
+        "https://httpbin.org/post", json={"name": "Integrates", "type": "API Client"}
+    )
     print(f"POST Status Code: {response.status_code}")
     print(f"Response JSON: {response.json()}")
 
     # Using the context manager
     with api.Client() as client:
-        response = client.get("https://httpbin.org/headers", headers={"X-Custom-Header": "API Requests"})
+        response = client.get(
+            "https://httpbin.org/headers", headers={"X-Custom-Header": "Integrates"}
+        )
         print(f"Headers Status Code: {response.status_code}")
         print(f"Custom header echoed: {response.json()}")
 
@@ -42,7 +46,7 @@ async def async_example():
 
         # Make a POST request with JSON data
         response = await client.post(
-            "https://httpbin.org/post", json={"name": "API Requests Async", "type": "API Client"}
+            "https://httpbin.org/post", json={"name": "Integrates Async", "type": "API Client"}
         )
         print(f"Async POST Status Code: {response.status_code}")
         print(f"Async Response JSON: {response.json()}")

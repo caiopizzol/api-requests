@@ -1,12 +1,12 @@
 """
-GraphQL examples using API Requests.
+GraphQL examples using Integrates.
 
 This example demonstrates how to use the GraphQL client to interact with GraphQL APIs.
 """
 
 import asyncio
 
-import api_requests as api
+import integrates as api
 
 
 def graphql_query_example():

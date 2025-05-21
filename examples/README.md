@@ -1,10 +1,10 @@
-# API Requests Examples
+# Integrates Examples
 
-This directory contains example scripts demonstrating how to use API Requests.
+This directory contains example scripts demonstrating how to use Integrates.
 
 ## Basic Examples
 
-- **basic_request.py**: Demonstrates how to make basic HTTP requests using API Requests
+- **basic_request.py**: Demonstrates how to make basic HTTP requests using Integrates
 - **authentication.py**: Shows how to use different authentication methods
 - **middleware.py**: Examples of using middleware components for logging, retry, and rate limiting
 - **rest_resource.py**: Shows how to use the REST resource pattern for API interactions
@@ -21,7 +21,7 @@ python basic_request.py
 
 ## Requirements
 
-All examples require the API Requests package to be installed. If you're working with the development version, you can install it in development mode:
+All examples require the Integrates package to be installed. If you're working with the development version, you can install it in development mode:
 
 ```bash
 pip install -e ../

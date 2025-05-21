@@ -4,14 +4,14 @@ REST client implementation.
 
 from typing import Any, Dict, List, Optional, Union
 
-from api_requests.auth.base import Auth
-from api_requests.core.client import AsyncClient, Client
-from api_requests.core.response import Response
-from api_requests.middleware.base import Middleware
+from integrates.auth.base import Auth
+from integrates.core.client import AsyncClient, Client
+from integrates.core.response import Response
+from integrates.middleware.base import Middleware
 
 
 class RestClient(Client):
-    """REST client for making RESTful API requests."""
+    """REST client for making RESTful integrates."""
 
     def __init__(
         self,
@@ -56,7 +56,7 @@ class RestClient(Client):
 
 
 class AsyncRestClient(AsyncClient):
-    """Asynchronous REST client for making RESTful API requests."""
+    """Asynchronous REST client for making RESTful integrates."""
 
     def __init__(
         self,

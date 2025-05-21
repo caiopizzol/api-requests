@@ -1,14 +1,14 @@
 """
-Authentication examples using API Requests.
+Authentication examples using Integrates.
 
-This example demonstrates how to use different authentication methods with API Requests.
+This example demonstrates how to use different authentication methods with Integrates.
 """
 
 import os
 
-import api_requests as api
-from api_requests.auth import ApiKeyAuth, BasicAuth, BearerAuth, OAuth2
-from api_requests.auth.api_key import ApiKeyLocation
+import integrates as api
+from integrates.auth import ApiKeyAuth, BasicAuth, BearerAuth, OAuth2
+from integrates.auth.api_key import ApiKeyLocation
 
 
 def basic_auth_example():

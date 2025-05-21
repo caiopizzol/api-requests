@@ -1,6 +1,6 @@
-# API Requests - A requests-style SDK for APIs
+# Integrates - A requests-style SDK for APIs
 
-API Requests is a Python library providing a simple, ergonomic interface for interacting with various API protocols (REST, GraphQL, SOAP) while maintaining the familiar feel of the Python 'requests' library.
+Integrates is a Python library providing a simple, ergonomic interface for interacting with various API protocols (REST, GraphQL, SOAP) while maintaining the familiar feel of the Python 'requests' library.
 
 ## Features
 
@@ -15,7 +15,7 @@ API Requests is a Python library providing a simple, ergonomic interface for int
 ## Installation
 
 ```bash
-pip install api-requests
+pip install integrates
 ```
 
 ## Quick Start
@@ -23,7 +23,7 @@ pip install api-requests
 ### Basic Usage
 
 ```python
-import api_requests as api
+import integrates as api
 
 # Create a client
 client = api.Client()
@@ -44,7 +44,7 @@ print(f"Status: {response.status_code}")
 
 ```python
 import asyncio
-import api_requests as api
+import integrates as api
 
 async def main():
     async with api.AsyncClient() as client:
@@ -57,8 +57,8 @@ asyncio.run(main())
 ### Authentication
 
 ```python
-import api_requests as api
-from api_requests.auth import BearerAuth
+import integrates as api
+from integrates.auth import BearerAuth
 
 # Create a client with token authentication
 client = api.Client(
@@ -73,8 +73,8 @@ response = client.get("/users/me")
 ### Middleware
 
 ```python
-import api_requests as api
-from api_requests.middleware import RetryMiddleware, LoggingMiddleware
+import integrates as api
+from integrates.middleware import RetryMiddleware, LoggingMiddleware
 
 # Create a client with middleware
 client = api.Client(
@@ -91,7 +91,7 @@ response = client.get("https://api.example.com/data")
 ### Resource Pattern for REST APIs
 
 ```python
-import api_requests as api
+import integrates as api
 
 # Create a REST client
 client = api.RestClient(base_url="https://api.example.com")
@@ -125,8 +125,8 @@ For more detailed documentation, see the [examples](./examples) directory.
 
 ```bash
 # Clone the repository
-git clone https://github.com/caiopizzol/api-requests.git
-cd api-requests
+git clone https://github.com/caiopizzol/integrates.git
+cd integrates
 
 # Install development dependencies
 pip install -e ".[dev]"

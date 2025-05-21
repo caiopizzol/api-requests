@@ -96,7 +96,7 @@ class Response:
         Raises:
             HTTPError: If the response has a status code >= 400
         """
-        from api_requests.src.core.exceptions import HTTPError
+        from integrates.src.core.exceptions import HTTPError
 
         if not self.ok:
             raise HTTPError(f"HTTP Error {self.status_code}: {self.text()}", response=self)

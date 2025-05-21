@@ -1,19 +1,19 @@
 """
-Exception classes for API Requests.
+Exception classes for Integrates.
 """
 
 from typing import Optional
 
-from api_requests.core.response import Response
+from integrates.core.response import Response
 
 
-class APIRequestsError(Exception):
-    """Base exception for all API Requests errors."""
+class IntegratesError(Exception):
+    """Base exception for all Integrates errors."""
 
     pass
 
 
-class TransportError(APIRequestsError):
+class TransportError(IntegratesError):
     """Error during HTTP transport."""
 
     pass
@@ -25,7 +25,7 @@ class TimeoutError(TransportError):
     pass
 
 
-class HTTPError(APIRequestsError):
+class HTTPError(IntegratesError):
     """HTTP error response."""
 
     def __init__(self, message: str, response: Optional[Response] = None):
@@ -45,7 +45,7 @@ class HTTPError(APIRequestsError):
         return self.response.status_code if self.response else None
 
 
-class SchemaValidationError(APIRequestsError):
+class SchemaValidationError(IntegratesError):
     """Error validating response against schema."""
 
     pass

@@ -8,14 +8,14 @@ import re
 import xml.etree.ElementTree as ET
 from typing import Any, Dict, List, Optional, Union
 
-from api_requests.auth.base import Auth
-from api_requests.core.client import AsyncClient, Client
-from api_requests.core.response import Response
-from api_requests.middleware.base import Middleware
+from integrates.auth.base import Auth
+from integrates.core.client import AsyncClient, Client
+from integrates.core.response import Response
+from integrates.middleware.base import Middleware
 
 
 class SoapClient(Client):
-    """SOAP client for making SOAP API requests."""
+    """SOAP client for making SOAP integrates."""
 
     def __init__(
         self,
@@ -168,7 +168,7 @@ class SoapClient(Client):
 
 
 class AsyncSoapClient(AsyncClient):
-    """Asynchronous SOAP client for making SOAP API requests."""
+    """Asynchronous SOAP client for making SOAP integrates."""
 
     def __init__(
         self,
