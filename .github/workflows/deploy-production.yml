@@ -23,7 +23,11 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  run-pre-commit:
+    uses: caiopizzol/integrates/.github/workflows/pre-commit.yml@main
+
   run-unit-tests:
+    needs: run-pre-commit
     uses: caiopizzol/integrates/.github/workflows/run-unit-tests.yml@main
     with:
       source_branch: ${{ github.head_ref }}
