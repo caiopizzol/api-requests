@@ -26,5 +26,5 @@ jobs:
     with:
       source_branch: ${{ github.head_ref }}
       source_folder: "src"
-      python_versions: '["3.8, "3.9", "3.10", "3.11", "3.12"]'
+      python_versions: '["3.8", "3.9", "3.10", "3.11", "3.12"]'
     secrets: inherit
