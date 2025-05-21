@@ -1,4 +1,4 @@
-name: 🧪️ Deploy livetest version [auto]
+name: 🔍 PR check [auto]
 
 on:
   workflow_dispatch:
@@ -16,10 +16,9 @@ on:
       - "pyproject.toml"
 
 concurrency:
-  group: livetest-${{ github.event.pull_request.number || github.ref }} # Cancel previous livetest deployments
+  group: pr-check-${{ github.event.pull_request.number || github.ref }} # Cancel previous pr-check runs
   cancel-in-progress: true
 
-#Actions
 jobs:
   run-pre-commit:
     uses: caiopizzol/integrates/.github/workflows/pre-commit.yml@main

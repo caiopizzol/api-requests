@@ -30,7 +30,7 @@ jobs:
     needs: run-pre-commit
     uses: caiopizzol/integrates/.github/workflows/run-unit-tests.yml@main
     with:
-      source_branch: ${{ github.head_ref }}
+      source_branch: ${{ github.head_ref || 'main' }}
       source_folder: "src"
       python_versions: '["3.8", "3.9", "3.10", "3.11", "3.12"]'
     secrets: inherit
