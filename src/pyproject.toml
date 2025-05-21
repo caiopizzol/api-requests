@@ -9,7 +9,7 @@ description = "A requests-style SDK for APIs"
 readme = "README.md"
 requires-python = ">=3.8"
 dependencies = ["httpx>=0.23.0"]
-license = "MIT"
+license = { text = "MIT" }
 [[project.authors]]
 name = "Caio Pizzol"
 email = "hi@caiopizzol.com"
