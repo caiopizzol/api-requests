@@ -208,6 +208,18 @@ class ResourceClient:
         """
         return self.client.delete(self._url(path), **kwargs)
 
+    def resource(self, path: str) -> "ResourceClient":
+        """
+        Create a sub-resource client.
+
+        Args:
+            path: Resource path
+
+        Returns:
+            ResourceClient for the specified sub-resource
+        """
+        return ResourceClient(self.client, f"{self.path}/{path}")
+
 
 class AsyncResourceClient:
     """Asynchronous client for a specific REST resource."""
@@ -316,3 +328,15 @@ class AsyncResourceClient:
             Response
         """
         return await self.client.delete(self._url(path), **kwargs)
+
+    def resource(self, path: str) -> "AsyncResourceClient":
+        """
+        Create a sub-resource client.
+
+        Args:
+            path: Resource path
+
+        Returns:
+            AsyncResourceClient for the specified sub-resource
+        """
+        return AsyncResourceClient(self.client, f"{self.path}/{path}")

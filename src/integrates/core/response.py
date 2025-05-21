@@ -79,14 +79,23 @@ class Response:
             "headers": dict(response.request.headers),
         }
 
+        # Ensure the response is read before accessing elapsed time
+        content = response.content
+        elapsed = None
+        try:
+            elapsed = response.elapsed.total_seconds() if response.elapsed else None
+        except RuntimeError:
+            # If elapsed is accessed before response is read, just set it to None
+            pass
+
         return cls(
             status_code=response.status_code,
             headers=dict(response.headers),
-            content=response.content,
+            content=content,
             url=str(response.url),
             request_info=request_info,
             encoding=response.encoding,
-            elapsed=response.elapsed.total_seconds() if response.elapsed else None,
+            elapsed=elapsed,
         )
 
     def raise_for_status(self) -> None:
@@ -96,7 +105,7 @@ class Response:
         Raises:
             HTTPError: If the response has a status code >= 400
         """
-        from integrates.src.core.exceptions import HTTPError
+        from integrates.core.exceptions import HTTPError
 
         if not self.ok:
             raise HTTPError(f"HTTP Error {self.status_code}: {self.text()}", response=self)
