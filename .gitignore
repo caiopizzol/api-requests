@@ -8,5 +8,7 @@ __pycache__/
 .pytest_cache/
 dev/
 .venv/
-.tox/
 .coverage
+coverage.xml
+.benchmarks/
+.tox/
